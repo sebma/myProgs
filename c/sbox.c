@@ -1,6 +1,6 @@
+#include <stdlib.h>
 //cf. https://en.wikipedia.org/wiki/Rijndael_S-box#Example_implementation_in_C_language
 #include <stdint.h>
-#include <stdlib.h>
 
 #define ROTL8(x,shift) ((uint8_t) ((x) << (shift)) | ((x) >> (8 - (shift))))
 
