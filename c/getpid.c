@@ -7,8 +7,9 @@ int main()
 	pid_t pid = getpid();
 	pid_t ppid = getppid();
 	char line[30];
-	gets(line);
+	while( gets(line) )
+		printf("%s\n", line);
 
 	printf("PID  PPID\n");
-	printf("%lu %lu\n", pid, ppid);
+	printf("%d %d\n", pid, ppid);
 }
