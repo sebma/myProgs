@@ -4,9 +4,11 @@
 
 int main()
 {
-  pid_t pid = getpid();
-  pid_t ppid = getppid();
+	pid_t pid = getpid();
+	pid_t ppid = getppid();
+	char line[30];
+	gets(line);
 
-  printf("PID  PPID\n");
-  printf("%lu %lu\n", pid, ppid);
+	printf("PID  PPID\n");
+	printf("%lu %lu\n", pid, ppid);
 }
