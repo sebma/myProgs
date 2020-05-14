@@ -39,12 +39,11 @@ int main (int argc, char **argv) {
 
 	char a[25]; //byte array
 
-	printf("\n=> sizeof(a) = %lu\n", sizeof a);
+	printf("\n=> sizeof(a) = %lu\n", sizeof a / sizeof(char));
 
 	printf("\n=> sizeof(a) = %lu\n", sebSizeOfArray1(a));
 
 	printf("\n=> sizeof(a) = %lu\n", sebSizeOfArray2(a));
-
 
 //  printf("Hit enter to exit.\n");
 //  char *scannedText;
