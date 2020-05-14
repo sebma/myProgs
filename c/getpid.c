@@ -5,11 +5,10 @@
 int main()
 {
 	pid_t pid = getpid();
-	pid_t ppid = getppid();
 	char line[30];
 	while( gets(line) )
 		printf("%s\n", line);
 
-	printf("PID  PPID\n");
-	printf("%d %d\n", pid, ppid);
+	printf("PID\n");
+	printf("%d\n", pid);
 }
