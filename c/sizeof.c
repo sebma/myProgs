@@ -2,10 +2,11 @@
 #include <stdint.h> //uint8_t, etc...
 
 #define sebSizeOfArray1( array ) ( sizeof array / sizeof *array )
+
 long unsigned sebSizeOfArray2( char * array ) {
-//	return sizeof array / sizeof *array;
-	return sizeof array;
+	return sizeof array / sizeof *array;
 }
+
 int main (int argc, char **argv) {
 
 	printf("\nsizeof(char):  %lu bits\n", 8 * sizeof(char) );
