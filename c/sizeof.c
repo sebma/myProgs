@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdint.h> //uint8_t, etc...
 
+#define sebSizeOfArray1( array ) ( sizeof array / sizeof *array )
+long unsigned sebSizeOfArray2( char * array ) {
+//	return sizeof array / sizeof *array;
+	return sizeof array;
+}
 int main (int argc, char **argv) {
 
 	printf("\nsizeof(char):  %lu bits\n", 8 * sizeof(char) );
@@ -31,11 +36,14 @@ int main (int argc, char **argv) {
 
 	printf("sizeof(int64_t): %lu bits\n", 8 * sizeof(int64_t));
 
-	uint8_t a[15]; //byte array
+	char a[25]; //byte array
 
-	printf("\n=> sizeof(a) = %lu\n", sizeof(a));
+	printf("\n=> sizeof(a) = %lu\n", sizeof a);
 
-	printf("=> sizeof(a)/sizeof(uint8_t) = %lu\n", sizeof(a)/sizeof(uint8_t));
+	printf("\n=> sizeof(a) = %lu\n", sebSizeOfArray1(a));
+
+	printf("\n=> sizeof(a) = %lu\n", sebSizeOfArray2(a));
+
 
 //  printf("Hit enter to exit.\n");
 //  char *scannedText;
